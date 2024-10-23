@@ -13,6 +13,7 @@ app.get('/auth/:secret', (req, res) => {
   const response = auth(secret);
   console.log(secret)
   res.status(response.status).send(response.message);
+  console.log(secret)
 });
 
 app.listen(port, () => {
